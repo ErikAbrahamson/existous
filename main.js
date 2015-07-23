@@ -1,8 +1,8 @@
 window.onload = function() {
-  fade('span');
+  var span = document.getElementById('here');
+  fade(span);
   startBG();
 };
-fade('span');
 function startBG() {
   var vid = document.getElementById("bgvid");
   var pauseButton = document.getElementById("vidpause");
@@ -29,7 +29,7 @@ function startBG() {
 function fade(element) {
     var op = 1;  // initial opacity
     var timer = setInterval(function () {
-        if (op <= 0.1){
+        if (op <= 0.1) {
             clearInterval(timer);
             element.style.display = 'none';
         }
